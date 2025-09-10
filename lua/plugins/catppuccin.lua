@@ -37,7 +37,7 @@ local config = function()
     },
     color_overrides = {
       all = {
-        text = "#d9d9d9",
+        text = "#d5d5d5",
       },
       mocha = { -- Oled
         rosewater = "#f5e0dc",
