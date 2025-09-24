@@ -58,21 +58,6 @@ keymap.set("n", "<C-k>", "TmuxNavigateUp") -- Navigate Up
 keymap.set("n", "<C-l>", "TmuxNavigateRight") -- Navigate Right
 keymap.set("n", "<leader>mz", ":Maximize<CR>") -- Maximize current pane
 
--- Buffers
-
-keymap.set("n", "<M-n>", ":BufferLineCycleNext<CR>") -- Next Buffer
-keymap.set("n", "<M-p>", ":BufferLineCyclePrev<CR>") -- Previous Buffer
-
-keymap.set("n", "<M-1>", ":BufferLineGoToBuffer 1<CR>") -- Move to Buffer
-keymap.set("n", "<M-2>", ":BufferLineGoToBuffer 2<CR>") -- Move to Buffer
-keymap.set("n", "<M-3>", ":BufferLineGoToBuffer 3<CR>") -- Move to Buffer
-keymap.set("n", "<M-4>", ":BufferLineGoToBuffer 4<CR>") -- Move to Buffer
-keymap.set("n", "<M-5>", ":BufferLineGoToBuffer 5<CR>") -- Move to Buffer
-keymap.set("n", "<M-6>", ":BufferLineGoToBuffer 6<CR>") -- Move to Buffer
-keymap.set("n", "<M-7>", ":BufferLineGoToBuffer 7<CR>") -- Move to Buffer
-keymap.set("n", "<M-8>", ":BufferLineGoToBuffer 8<CR>") -- Move to Buffer
-keymap.set("n", "<M-9>", ":BufferLineGoToBuffer 9<CR>") -- Move to Buffer
-
 -- Indenting
 
 keymap.set("v", "<", "<gv") -- Allows multiple indents without losing cursor
@@ -121,3 +106,17 @@ keymap.set("n", "<leader>cc", ":CsvViewToggle display_mode=border header_lnum=1"
 -- Others
 
 -- keymap.set("n", "<leader>oz", ":ObsidianCheck<cr>", { desc = "Check plugin" })
+
+-- Bufferline
+
+-- keymap.set("n", "<M-n>", ":BufferLineCycleNext<CR>") -- Next Buffer
+-- keymap.set("n", "<M-p>", ":BufferLineCyclePrev<CR>") -- Previous Buffer
+-- keymap.set("n", "<M-1>", ":BufferLineGoToBuffer 1<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-2>", ":BufferLineGoToBuffer 2<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-3>", ":BufferLineGoToBuffer 3<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-4>", ":BufferLineGoToBuffer 4<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-5>", ":BufferLineGoToBuffer 5<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-6>", ":BufferLineGoToBuffer 6<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-7>", ":BufferLineGoToBuffer 7<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-8>", ":BufferLineGoToBuffer 8<CR>") -- Move to Buffer
+-- keymap.set("n", "<M-9>", ":BufferLineGoToBuffer 9<CR>") -- Move to Buffer
