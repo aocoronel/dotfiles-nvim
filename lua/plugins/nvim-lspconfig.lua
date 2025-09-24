@@ -138,9 +138,48 @@ local config = function()
 
   -- C/C++
   lspconfig.clangd.setup({
+    capabilities = {
+      offsetEncoding = { "utf-8", "utf-16" },
+    },
+    textDocument = {
+      completion = {
+        editsNearCursor = true,
+      },
+    },
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+    keys = {
+      { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
+    },
+    root_markers = {
+      ".clangd",
+      ".clang-tidy",
+      ".clang-format",
+      "compile_commands.json",
+      "compile_flags.txt",
+      "configure.ac", -- AutoTools
+      "Makefile",
+      "configure.ac",
+      "configure.in",
+      "config.h.in",
+      "meson.build",
+      "meson_options.txt",
+      "build.ninja",
+      ".git",
+    },
     cmd = {
       "clangd",
-      "--offset-encoding=utf-16",
+      "--background-index",
+      "--clang-tidy",
+      "--header-insertion=iwyu",
+      "--completion-style=detailed",
+      "--function-arg-placeholders",
+      "--fallback-style=llvm",
+    },
+    init_options = {
+      usePlaceholders = true,
+      completeUnimported = true,
+      clangdFileStatus = true,
+      fallbackFlags = { "-std=c99" },
     },
   })
 
