@@ -7,7 +7,7 @@ local config = function()
 end
 
 return {
-  "echasnovski/mini.nvim",
+  "nvim-mini/mini.nvim",
   lazy = true,
   event = "BufReadPre",
   version = false,

@@ -1,5 +1,5 @@
 return {
-  "williamboman/mason-lspconfig.nvim",
+  "mason-org/mason-lspconfig.nvim",
   opts = {
     ensure_installed = {
       "bashls",
@@ -26,5 +26,5 @@ return {
     automatic_installation = true,
   },
   event = "BufReadPre",
-  dependencies = "williamboman/mason.nvim",
+  dependencies = "mason-org/mason.nvim",
 }

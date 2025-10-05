@@ -253,7 +253,7 @@ return {
   event = "BufReadPre",
   lazy = true,
   dependencies = {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     "creativenull/efmls-configs-nvim",
   },
   opts = {
