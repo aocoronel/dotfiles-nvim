@@ -3,6 +3,11 @@ local bufferline = {
   enabled = false,
 }
 
+local ranger = {
+  "kelly-lin/ranger.nvim",
+  enabled = false,
+}
+
 local tokyonight = {
   "folke/tokyonight.nvim",
   enabled = false,
@@ -53,4 +58,5 @@ return {
   img_clip,
   css_view,
   fzf_lua,
+  ranger,
 }

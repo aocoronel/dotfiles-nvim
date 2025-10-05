@@ -1,7 +1,6 @@
 return {
   "kelly-lin/ranger.nvim",
   lazy = true,
-  enabled = true,
   keys = {
     {
       "-",
