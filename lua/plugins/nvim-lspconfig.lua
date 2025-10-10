@@ -1,8 +1,10 @@
 local config = function()
-  local lspconfig = require("lspconfig")
+  -- local lspconfig = require("lspconfig")
+  local lspconfig = vim.lsp
 
   -- lua
-  lspconfig.lua_ls.setup({
+  lspconfig.enable("lua_ls")
+  lspconfig.config("lua_ls", {
     settings = {
       Lua = {
         diagnostics = {
@@ -18,67 +20,60 @@ local config = function()
     },
   })
 
-  -- Nim
-  -- local lspconfig = require("lspconfig")
-  -- local util = require("lspconfig.util")
-  --
-  -- lspconfig.nim_langserver.setup({
-  --   cmd = { "nimlangserver" },
-  --   filetypes = { "nim" },
-  -- })
-  -- lspconfig.nimls.setup({
-  --   cmd = { "nimlsp" },
-  --   filetypes = { "nim" },
-  -- })
-
   -- Odin
-  -- lspconfig.ols.setup({
+  -- lspconfig.enable("ols")
+  -- lspconfig.config("ols", {
   --   cmd = { "ols" },
   --   filetypes = { "odin" },
   -- })
 
   -- Nix
-  -- lspconfig.nil_ls.setup({
+  -- lspconfig.enable("nix_ls")
+  -- lspconfig.config("nix_ls", {
   --   cmd = { "nil" },
   --   filetypes = { "nix" },
   --   root_markers = { "flake.nix", ".git" },
   -- })
 
   -- json
-  lspconfig.jsonls.setup({
-    filetypes = { "json", "jsonc" },
-    init_options = {
-      provideFormatter = true,
-    },
-  })
+  -- lspconfig.enable("jsonls")
+  -- lspconfig.config("jsonls", {
+  --   filetypes = { "json", "jsonc" },
+  --   init_options = {
+  --     provideFormatter = true,
+  --   },
+  -- })
 
   -- python
-  lspconfig.pyright.setup({
-    settings = {
-      pyright = {
-        disableOrganizeImports = false,
-        analysis = {
-          useLibraryCodeForTypes = true,
-          autoSearchPaths = true,
-          diagnosticMode = "workspace",
-          autoImportCompletions = true,
-        },
-      },
-    },
-  })
+  -- lspconfig.enable("pyright")
+  -- lspconfig.config("pyright", {
+  --   settings = {
+  --     pyright = {
+  --       disableOrganizeImports = false,
+  --       analysis = {
+  --         useLibraryCodeForTypes = true,
+  --         autoSearchPaths = true,
+  --         diagnosticMode = "workspace",
+  --         autoImportCompletions = true,
+  --       },
+  --     },
+  --   },
+  -- })
 
   -- golang
-  lspconfig.gopls.setup({
-    filetypes = {
-      "go",
-      "gomod",
-      "gowork",
-      "gotmpl",
-    },
-  })
+  -- lspconfig.enable("gopls")
+  -- lspconfig.config("gopls", {
+  --   filetypes = {
+  --     "go",
+  --     "gomod",
+  --     "gowork",
+  --     "gotmpl",
+  --   },
+  -- })
 
   -- typescript
-  -- lspconfig.ts_ls.setup({
+  -- lspconfig.enable("ts_ls")
+  -- lspconfig.config("ts_ls", {
   --   filetypes = {
   --     "typescript",
   --     "javascript",
@@ -95,7 +90,8 @@ local config = function()
   -- })
 
   -- bash
-  lspconfig.bashls.setup({
+  lspconfig.enable("bashls")
+  lspconfig.config("bashls", {
     filetypes = { "sh", "aliasrc" },
     settings = {
       bashIde = {
@@ -105,39 +101,24 @@ local config = function()
   })
 
   -- markdown
-  require("lspconfig").marksman.setup({
+  lspconfig.enable("marksman")
+  lspconfig.config("marksman", {
     filetypes = { "markdown", "markdown.mdx" },
   })
-  require("lspconfig").markdown_oxide.setup({
+  lspconfig.enable("markdown_oxide")
+  lspconfig.config("markdown_oxide", {
     filetypes = { "markdown" },
   })
 
   -- rust
-  -- require("lspconfig").bacon_ls.setup({
+  -- lspconfig.config("bacon_ls", {
+  -- lspconfig.enable("bacon_ls")
   --   filetypes = { "rust" },
   -- })
 
-  -- typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
-  -- lspconfig.emmet_ls.setup({
-  --   filetypes = {
-  --     "typescriptreact",
-  --     "javascriptreact",
-  --     "javascript",
-  --     "css",
-  --     "sass",
-  --     "scss",
-  --     "less",
-  --     "svelte",
-  --     "vue",
-  --     "html",
-  --   },
-  -- })
-
-  -- docker
-  -- lspconfig.dockerls.setup({})
-
   -- C/C++
-  lspconfig.clangd.setup({
+  lspconfig.enable("clangd")
+  lspconfig.config("clangd", {
     capabilities = {
       offsetEncoding = { "utf-8", "utf-16" },
     },
@@ -196,8 +177,8 @@ local config = function()
   local cpplint = require("efmls-configs.linters.cpplint")
   local clangformat = require("efmls-configs.formatters.clang_format")
 
-  -- configure efm server
-  lspconfig.efm.setup({
+  lspconfig.enable("efm")
+  lspconfig.config("efm", {
     filetypes = {
       "lua",
       "python",
