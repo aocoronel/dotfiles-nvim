@@ -110,7 +110,7 @@ opt.hlsearch = true
 opt.softtabstop = 2
 
 opt.nu = true
-opt.colorcolumn = "100"
+opt.colorcolumn="80"
 opt.cmdheight = 1
 
 opt.hidden = true
