@@ -1,0 +1,12 @@
+{
+  "environment": {
+    "body": [
+      "{pkgs, ...}: {",
+      "  environment.systemPackages = with pkgs; [",
+      "    $package",
+      "  ];",
+      "}"
+    ],
+    "prefix": "environment"
+  }
+}

@@ -18,6 +18,12 @@
           "nim"
         ],
         "path": "./nim.json"
+      },
+      {
+        "language": [
+          "nix"
+        ],
+        "path": "./nix.json"
       }
     ]
   },
